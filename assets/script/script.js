@@ -37,5 +37,12 @@ $(document).ready(function () {
     $(".section ul li button").removeClass("active");
     $(this).addClass("active");
     menuForm(this.id);
+    page = 0;
+    for (i = 0; i < menuList.length; i++) {
+      if (this.id === menuList[i].id) {
+        break;
+      }
+      page++;
+    }
   });
 });
